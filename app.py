@@ -3,8 +3,8 @@ import torch
 import numpy as np
 from PIL import Image
 
-from models.model import UNet
-from preprocessing.preprocess import preprocess_image
+from model import UNet
+from preprocess import preprocess_image
 
 
 st.set_page_config(
