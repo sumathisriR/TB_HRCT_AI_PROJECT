@@ -21,19 +21,9 @@ def load_model():
     return model
 
 
-def predict_segmentation(image_array):
-    model = load_model()
-
-    tensor = torch.from_numpy(image_array)
-    tensor = tensor.unsqueeze(0).unsqueeze(0)
-
-    with torch.no_grad():
-        output = model(tensor)
-        probability = torch.sigmoid(output)
-
-    mask = (probability > 0.5).float()
-
-    return mask.squeeze().numpy()
+def
+predict_segmentation(image_array):
+    return None
 
 
 st.title("🫁 TB HRCT AI Project")
@@ -86,7 +76,11 @@ if uploaded_file is not None:
 
     if st.button("🔍 Analyze HRCT", type="primary"):
 
-        mask = predict_segmentation(image_array)
+        st.warning(
+    "TB segmentation model is not trained yet. "
+    "This research prototype cannot provide a clinical segmentation result."
+)
+st.stop()
 
         original = Image.open(uploaded_file).convert("L")
 
