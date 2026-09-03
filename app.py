@@ -21,8 +21,7 @@ def load_model():
     return model
 
 
-def
-predict_segmentation(image_array):
+def predict_segmentation(image_array):
     return None
 
 
