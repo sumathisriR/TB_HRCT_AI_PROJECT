@@ -80,4 +80,3 @@ if uploaded_file is not None:
     "This research prototype cannot provide a clinical segmentation result."
 )
 st.stop()
-        "Upload an HRCT image to begin the analysis pipe
